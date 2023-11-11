@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# commonLabels:
+#   app.xgeeks.org/team: idp_geekathon
+#   backstage.io/kubernetes-id: undercover-ftw
+
+namespace: idpkathon-dev
+# namespace: undercover-ftw-idp_geekathon-dev
+
+resources:
+  - ../../base
+  - ingress.yaml
+
+images:
+  # ATENTION name = image.name NOT name = spec.containers[0].name
+  - name: ghcr.io/xgeeks-geekathon/undercover-ftw
+    newTag: v1
+  - name: ghcr.io/xgeeks-geekathon/undercover-ftw-datafeeder
+    newTag: v1
+# replicas:
+#   - name: undercover-ftw # the deployment name
+#     count: 1
