@@ -15,6 +15,6 @@ resources:
   # ATENTION name = image.name NOT name = spec.containers[0].name
 images:
 - name: ghcr.io/xgeeks-geekathon/undercover-ftw
-  newTag: ec7fbf4
+  newTag: d4e6c45
 - name: ghcr.io/xgeeks-geekathon/undercover-ftw-datafeeder
   newTag: ec7fbf4
