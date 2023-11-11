@@ -9,15 +9,12 @@ namespace: idpkathon-dev
 # namespace: undercover-ftw-idp_geekathon-dev
 
 resources:
-  - ../../base
-  - ingress.yaml
+- ../../base
+- ingress.yaml
 
-images:
   # ATENTION name = image.name NOT name = spec.containers[0].name
-  - name: ghcr.io/xgeeks-geekathon/undercover-ftw
-    newTag: v1
-  - name: ghcr.io/xgeeks-geekathon/undercover-ftw-datafeeder
-    newTag: v1
-# replicas:
-#   - name: undercover-ftw # the deployment name
-#     count: 1
+images:
+- name: ghcr.io/xgeeks-geekathon/undercover-ftw
+  newTag: v1
+- name: ghcr.io/xgeeks-geekathon/undercover-ftw-datafeeder
+  newTag: ec7fbf4
